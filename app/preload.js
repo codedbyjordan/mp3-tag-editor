@@ -31,21 +31,28 @@ const api = {
     const buffer = readFileSync(`${dir}/${path}`);
     let tags = NodeID3.read(buffer);
     tags = {
-      album: tags.album || "",
-      artist: tags.artist || "",
+      album: "",
+      artist: "",
       comment: {
-        language: "eng",
-        text: tags.comment.text || "",
+        language: "",
+        text: "",
       },
-      genre: tags.genre || "",
-      APIC: tags.raw.APIC.imageBuffer || "",
-      title: tags.title || "",
-      trackNumber: tags.trackNumber || "",
-      trackNum: tags.trackNumber ? Number(tags.trackNumber.split("/")[0]) : 0,
-
+      genre: "",
+      title: "",
+      trackNumber: "",
+      trackNum: 0,
+      totalTracks: 0,
+      year: "",
+      ...tags,
+      APIC: tags.raw.APIC.imageBuffer,
+      trackNum: tags.trackNumber ? Number(tags.trackNumber.split("/")[0]) : 1,
       totalTracks: getTotalTracks(dir),
-      year: tags.year || "",
     };
+
+    // remove un-needed properties
+    delete tags.image;
+    delete tags.raw;
+
     return { name: path, tags };
   },
 
