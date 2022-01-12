@@ -1,0 +1,37 @@
+{
+  "name": "mp3-tag-editor",
+  "version": "0.0.0",
+  "main": "./app/index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "electron:dev": "concurrently \"vite\" \"electron .\"",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
+  },
+  "devDependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
+    "@tsconfig/svelte": "^2.0.1",
+    "@types/electron": "^1.6.10",
+    "autoprefixer": "^10.3.7",
+    "concurrently": "^7.0.0",
+    "cssnano": "^5.0.8",
+    "electron-builder": "^22.14.5",
+    "electron-reloader": "^1.2.1",
+    "postcss": "^8.3.9",
+    "postcss-load-config": "^3.1.0",
+    "svelte": "^3.44.0",
+    "svelte-check": "^2.2.7",
+    "svelte-fa": "^2.4.0",
+    "svelte-preprocess": "^4.9.8",
+    "tailwindcss": "^2.2.16",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.4",
+    "vite": "^2.7.2"
+  },
+  "dependencies": {
+    "electron": "^16.0.6",
+    "node-id3": "^0.2.3"
+  }
+}
