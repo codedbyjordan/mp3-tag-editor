@@ -102,15 +102,14 @@
               updateTrackNumber(e);
             }}
           >
-            <optgroup label="Track Number">
-              {#each arrayFromRange(1, $currentTrack.tags.totalTracks) as trackNum}
-                <option
-                  value="{trackNum}/{$currentTrack.tags.totalTracks}"
-                  selected={trackNum == $currentTrack.tags.trackNum}
-                  >{trackNum}/{$currentTrack.tags.totalTracks}</option
-                >
-              {/each}
-            </optgroup>
+            <option value="">N/A</option>
+            {#each arrayFromRange(1, $currentTrack.tags.totalTracks) as trackNum}
+              <option
+                value="{trackNum}/{$currentTrack.tags.totalTracks}"
+                selected={trackNum == $currentTrack.tags.trackNum}
+                >{trackNum}/{$currentTrack.tags.totalTracks}</option
+              >
+            {/each}
           </select>
         </div>
         <div>

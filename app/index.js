@@ -56,17 +56,17 @@ app.whenReady().then(() => {
           click() {
             openDir();
           },
-          accelerator: "Command+O",
+          accelerator: "CommandOrControl+O",
         },
         {
           label: "Toggle Developer Tools",
           role: "toggleDevTools",
-          accelerator: "Command+Option+I",
+          accelerator: "CommandOrControl+Option+I",
         },
         {
           label: "Quit",
           role: "quit",
-          accelerator: "Command+Q",
+          accelerator: "CommandOrControl+Q",
         },
       ],
     },
@@ -76,7 +76,7 @@ app.whenReady().then(() => {
         {
           label: "Reload",
           role: "reload",
-          accelerator: "Command+R",
+          accelerator: "ControlOrCommand+R",
         },
       ],
     },
