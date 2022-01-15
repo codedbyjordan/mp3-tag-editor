@@ -7,7 +7,9 @@
     "build": "vite build",
     "electron:dev": "concurrently \"vite\" \"electron .\"",
     "preview": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "package": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "devDependencies": {
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
@@ -17,8 +19,10 @@
     "autoprefixer": "^10.3.7",
     "concurrently": "^7.0.0",
     "cssnano": "^5.0.8",
+    "electron": "^16.0.7",
     "electron-builder": "^22.14.5",
     "electron-reloader": "^1.2.1",
+    "node-id3": "^0.2.3",
     "postcss": "^8.3.9",
     "postcss-load-config": "^3.1.0",
     "svelte": "^3.44.0",
@@ -30,8 +34,16 @@
     "typescript": "^4.4.4",
     "vite": "^2.7.2"
   },
-  "dependencies": {
-    "electron": "^16.0.6",
-    "node-id3": "^0.2.3"
+  "dependencies": {},
+  "build": {
+    "appId": "com.codedbyjordan.mp3-tag-editor",
+    "mac": {
+      "category": "productivity"
+    },
+    "win": {
+      "target": [
+        "portable"
+      ]
+    }
   }
 }
