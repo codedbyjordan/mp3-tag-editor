@@ -14,6 +14,7 @@
   "devDependencies": {
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
+    "@tauri-apps/cli": "^1.0.0-rc.5",
     "@tsconfig/svelte": "^2.0.1",
     "@types/electron": "^1.6.10",
     "autoprefixer": "^10.3.7",

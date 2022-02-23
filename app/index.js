@@ -1,14 +1,6 @@
-const {
-  app,
-  BrowserWindow,
-  Menu,
-  dialog,
-  ipcMain,
-  ipcRenderer,
-} = require("electron");
-const { readdirSync, readFileSync } = require("fs");
+const { app, BrowserWindow, Menu, dialog, ipcMain } = require("electron");
+const { readdirSync } = require("fs");
 const path = require("path");
-const NodeID3 = require("node-id3");
 
 if (!app.isPackaged) {
   try {

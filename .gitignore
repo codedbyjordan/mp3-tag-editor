@@ -2,3 +2,5 @@
 /dist/
 /.vscode/
 .DS_Store
+
+src-tauri/icons/128x128.png
